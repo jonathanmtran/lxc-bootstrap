@@ -22,6 +22,17 @@
 
 - hosts: all
   tags:
+    - development
+  tasks:
+    - name: 'Install packages for development'
+      apt:
+        pkg:
+          - build-essential
+          - git
+        state: present
+
+- hosts: all
+  tags:
     - python
   tasks:
     - name: 'Install Python packages'

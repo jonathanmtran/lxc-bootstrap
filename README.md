@@ -23,4 +23,5 @@ Credit: https://coderwall.com/p/tx91cw/run-ansible-on-a-single-host
 
 The following tags are available to use with the `--tags` parameter:
 
+- development
 - python
