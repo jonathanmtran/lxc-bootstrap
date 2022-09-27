@@ -18,3 +18,9 @@ ansible-playbook -i <ip_address>, site.yml
 
 Note the comma after the IP address.
 Credit: https://coderwall.com/p/tx91cw/run-ansible-on-a-single-host
+
+### Tags
+
+The following tags are available to use with the `--tags` parameter:
+
+- python

@@ -19,3 +19,16 @@
           - vim
           - zsh
         state: present
+
+- hosts: all
+  tags:
+    - python
+  tasks:
+    - name: 'Install Python packages'
+      apt:
+        pkg:
+          - build-essential
+          - python3
+          - python3-dev
+          - python3-venv
+        state: present
