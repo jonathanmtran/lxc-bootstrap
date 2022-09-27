@@ -1,0 +1,20 @@
+---
+- hosts: all
+  tasks:
+    - name: 'Set timezone to America/Los_Angeles'
+      timezone:
+        name: America/Los_Angeles
+
+    - name: 'Update system packages'
+      apt:
+        name: "*"
+        state: latest
+        update_cache: yes
+
+    - name: 'Install commonly installed packages'
+      apt:
+        pkg:
+          - curl
+          - vim
+          - zsh
+        state: present
