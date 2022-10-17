@@ -1,0 +1,6 @@
+- name: 'Install packages for development'
+  apt:
+    pkg:
+      - build-essential
+      - git
+    state: present

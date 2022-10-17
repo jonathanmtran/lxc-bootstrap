@@ -7,21 +7,21 @@ a few tasks including the following:
 - Updating system packages
 - Installing commonly installed packages
 
+## Assumptions
+
+- LXC instance is running Debian
+- `remote_user` can SSH to instance through the use of a SSH public key
+
 ## Usage
 
-Determine the IP address of the LXC container and run the playbook with the
-following:
+Determine the IP address of the LXC container, update `hosts` giving the
+container the desired role(s), and run the playbook with the following:
 
 ```
-ansible-playbook -i <ip_address>, site.yml
+ansible-playbook site.yml
 ```
 
-Note the comma after the IP address.
-Credit: https://coderwall.com/p/tx91cw/run-ansible-on-a-single-host
-
-### Tags
-
-The following tags are available to use with the `--tags` parameter:
+### Roles
 
 - development
 - python
